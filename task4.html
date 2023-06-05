@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Task04</title>
+    <style>
+        .link {
+            float: right;
+        }
+
+        .card {
+            margin: 0 auto;
+            float: none;
+            margin-bottom: 10px;
+            margin-top: 200px;
+            padding-left: auto;
+            padding-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function validate() {
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+
+            if (user == "" && pass == "") {
+                document.getElementById("user").style.border = "2px solid red";
+                document.getElementById("pass").style.border = "2px solid red";
+                alert("Enter The Necessary Informations");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <div row="col-lg-1 col-md-4 col-sm-12">
+        <div class="card text-center w-25">
+            <div class="card-header" style="font-style: italic;font-weight: lighter;">
+                <nav>
+                    <h1>Instagram</h1>
+                </nav>
+            </div>
+            <div class="card-body align-middle">
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fa-sharp fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" id="user">
+                </div>
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" id="pass">
+                </div>
+                <div class="d-grid gap-2 mx-auto">
+                    <button class="btn btn-primary" style="font-weight: bold;" type="button"
+                        onclick="return validate()">Log in</button>
+                </div>
+                <div class="mb-3">
+                    <br>
+                    <div class=" mb-4">
+                        <input type="checkbox" class="form-check-input" id="box">
+                        <label class="form-check-label me-5" for="box">Remember me</label>
+                        <a href="" class="link">Forgot password?</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center" style="font-size: smaller;">Don't have an account! <a href="#"
+            style="text-decoration: none;">Sign up here.</a> </div>
+</body>
+
+</html>
